@@ -16,27 +16,27 @@ use App\Http\Controllers\PhoneController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/register', [AuthController::class,'register'])->name('register');
-Route::post('/register', [AuthController::class,'storeUser']);
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'storeUser']);
 
-Route::get('/login', [AuthController::class,'login'])->name('login');
-Route::post('/login', [AuthController::class,'authenticate']);
-Route::get('logout', [AuthController::class,'logout'])->name('logout');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/home', [AuthController::class,'home'])->name('home');
+Route::get('/home', [AuthController::class, 'home'])->name('home');
 
-Route::get('/phone', [PhoneController::class,'index'])->name('phone');
-Route::post('/phone', [PhoneController::class,'store']);
-Route::get('/phones', [PhoneController::class,'create']);
+Route::get('/phone', [PhoneController::class, 'index'])->name('phone');
+Route::post('/phone', [PhoneController::class, 'store']);
+Route::get('/phones', [PhoneController::class, 'create']);
 
-Route::get('/post', [PostController::class,'index'])->name('post');
-Route::post('/post', [PostController::class,'store']);
-Route::get('/posts', [PostController::class,'create']);
+Route::get('/post', [PostController::class, 'index'])->name('post');
+Route::post('/post', [PostController::class, 'store']);
+Route::get('/posts', [PostController::class, 'create']);
 
-Route::get('/comment', [CommentController::class,'index'])->name('comment');
-Route::post('/comment', [CommentController::class,'store']);
-Route::get('/comments', [CommentController::class,'create']);
+Route::get('/comment', [CommentController::class, 'index'])->name('comment');
+Route::post('/comment', [CommentController::class, 'store']);
+Route::get('/comments', [CommentController::class, 'create']);
